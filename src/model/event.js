@@ -6,33 +6,39 @@ const EventSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    eventName: {
+        type:String,
+        required:true
+    },
     eventDate: {
-        type: String,
-        required: true,
-    },
-    location: {
-        type: String,
-        required: true,
-    },
-    rol: {
-        type: String,
-        required: true, 
-    },
-    dni: {
-        type: String,
-        required: true,
-    },
-    birthdate: {
         type: Date,
         required: true,
     },
-    email: {
+    eventHour: {
+        type: String,
+    },
+    eventlocationId: {
         type: String,
         required: true,
     },
-    phoneNumber: {
+    eventPlaceId: {
         type: String,
-        required: true,
+        required: true
+    },
+    eventAccreditorId: {
+        type: String,
+        required: true
+    },
+    ticketTypes: {
+        type: Object,
+        required: true, 
+    },
+    eventBanner: {
+        type: String
+    },
+    status:{
+        type: Number,
+        default : 1
     }
 },
 {
